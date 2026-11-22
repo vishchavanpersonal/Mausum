@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{--ink:#172c45;--muted:#718198;--blue:#3678d8;--pale:#edf5ff;--line:#e8eef5;--white:#fff}
+*{box-sizing:border-box}
+html{min-height:100%;background:#f6f9fd}
+body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 85% 4%,#e6f2ff 0,transparent 34%),#f6f9fd}
+button,input{font:inherit}
+button{cursor:pointer}
+.page-shell{max-width:1180px;margin:0 auto;padding:0 34px}
+.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(205,220,238,.65)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 19px Manrope,sans-serif;letter-spacing:-.7px}
+.brand-mark{width:36px;height:36px;border-radius:12px;background:#e2efff;color:#3678d8;display:grid;place-items:center}
+.brand-light{font-weight:500;color:#6b7f98}
+.live-label{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#647790;background:#fff;padding:9px 13px;border:1px solid var(--line);border-radius:30px}
+.live-dot{width:7px;height:7px;background:#38b982;border-radius:50%;box-shadow:0 0 0 4px #e5f8f0}
+.intro{display:flex;align-items:center;justify-content:space-between;padding:52px 7px 39px;min-height:244px}
+.eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:700;color:#6c91bf;margin:0 0 10px}
+h1,h2,p{margin-top:0}
+h1{font:800 clamp(34px,4vw,48px)/1.12 Manrope,sans-serif;letter-spacing:-2px;margin:0;color:#1b3552}
+h1 span{color:#4a83ce}
+.intro-copy{color:#7b8ca2;font-size:14px;margin:14px 0 0}
+.intro-art{width:190px;height:155px;position:relative;display:grid;place-items:center;color:#76a7e5;margin-right:65px}
+.intro-art svg{position:relative;z-index:1;filter:drop-shadow(0 10px 12px #b5cce8)}
+.sun-orb{position:absolute;width:85px;height:85px;border-radius:50%;background:linear-gradient(145deg,#ffe5a6,#ffc76c);top:2px;right:35px;box-shadow:0 0 0 13px #ffedca55}
+.search-panel{background:#fff;border:1px solid #e9eff6;border-radius:18px;padding:24px 27px 22px;box-shadow:0 12px 35px #29496b08}
+.search-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.search-heading .eyebrow{margin-bottom:5px}
+h2{font:700 20px Manrope,sans-serif;letter-spacing:-.5px;margin:0}
+.country-tag{display:flex;align-items:center;gap:5px;font-size:11px;color:#6485ad;background:#eff6ff;padding:7px 10px;border-radius:20px}
+.search-box{height:46px;border:1px solid #dfe8f2;border-radius:10px;display:flex;align-items:center;gap:10px;padding:0 14px;color:#7e93ad;background:#fbfdff}
+.search-box:focus-within{border-color:#83afe8;box-shadow:0 0 0 3px #eaf3ff}
+.search-box input{border:0;outline:0;background:transparent;flex:1;min-width:0;color:var(--ink);font-size:13px}
+.search-hint{font-size:9px;letter-spacing:1px;color:#9aaabd;font-weight:700}
+.city-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.city-chip{border:1px solid #e5ebf2;border-radius:30px;background:#fff;padding:7px 12px;color:#687b91;font-size:11px;transition:.15s}
+.city-chip:hover{border-color:#a7c8f1;color:#3978c8;background:#f5f9ff}
+.city-chip.selected{border-color:#c6dcf8;color:#3476c9;background:#edf5ff;font-weight:700}
+.no-cities{font-size:12px;color:#8998aa;padding:7px}
+.current-card{margin-top:23px;border-radius:18px;background:linear-gradient(112deg,#214c7d,#3679bc 65%,#659ed4);color:#fff;min-height:205px;padding:24px 29px;display:grid;grid-template-columns:1.1fr .8fr 1fr;align-items:center;overflow:hidden;position:relative;box-shadow:0 15px 30px #285e9222}
+.current-card:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff18;border-radius:50%;right:24%;top:-170px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff06}
+.current-main,.current-icon,.current-stats{position:relative;z-index:1}
+.current-location{display:flex;align-items:center;gap:6px;color:#d7e9fb;font-size:12px}
+.current-temp{font:700 59px/.98 Manrope,sans-serif;letter-spacing:-3px;margin-top:13px}
+.current-temp span{font-size:30px;vertical-align:top;margin-left:3px}
+.feels-like{font-size:11px;color:#d5e7f7;margin-top:6px}
+.condition{font-size:13px;font-weight:600;margin-top:8px}
+.current-icon{display:grid;place-items:center;color:#ffe1a2}
+.current-icon svg{filter:drop-shadow(0 9px 9px #173f6844)}
+.current-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-left:1px solid #ffffff30;padding-left:22px}
+.current-stats div{display:flex;flex-direction:column;gap:7px}
+.current-stats svg{width:17px;height:17px;color:#c4e1ff}
+.current-stats span{font-size:10px;color:#d1e5f8}
+.current-stats strong{font:700 16px Manrope,sans-serif}
+.current-stats small{font:400 10px 'DM Sans',sans-serif;color:#d3e6f8}
+.forecast-section{margin-top:35px}
+.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:17px}
+.section-heading .eyebrow{margin-bottom:5px}
+.section-subtitle{font-size:12px;color:#8494a8;margin:5px 0 0}
+.updated{display:flex;align-items:center;gap:7px;color:#8293a8;font-size:11px;padding-bottom:3px}
+.forecast-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:9px}
+.forecast-day{min-width:0;background:#fff;border:1px solid #e9eff6;border-radius:13px;padding:14px 7px 13px;display:flex;align-items:center;flex-direction:column;box-shadow:0 6px 16px #29496b05}
+.forecast-day.today{border-color:#b9d5f5;background:#fafdff}
+.day-name{font-size:11px;font-weight:700;color:#405b78}
+.day-date{font-size:9px;color:#94a3b5;margin-top:4px}
+.day-icon{color:#e5a84d;margin:15px 0 11px}
+.day-condition{font-size:9px;color:#7d8da1;min-height:23px;text-align:center;line-height:1.3}
+.temperatures{display:flex;gap:7px;align-items:center;margin-top:9px}
+.temperatures strong{font-size:14px;color:#344e6b}
+.temperatures span{font-size:12px;color:#9aa7b6}
+.rain-line{display:flex;align-items:center;gap:3px;color:#78a4d6;font-size:9px;margin-top:10px;white-space:nowrap}
+.footnote{display:flex;justify-content:space-between;align-items:center;color:#9aa8b8;font-size:10px;margin:16px 2px 30px}
+.refresh-button{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#5787bd;font-size:11px}
+.refresh-button:hover{color:#245f9f}
+footer{border-top:1px solid #e8eef5;padding:20px 0 27px;display:flex;justify-content:space-between;color:#9aa8b8;font-size:10px}
+.loading-card{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;text-align:center;color:#6e8198;font-size:13px}
+.loader{display:inline-block;width:14px;height:14px;border:2px solid #d9e7f6;border-top-color:#4a87cc;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-banner{margin-top:20px;padding:14px 16px;border-radius:10px;background:#fff1ef;color:#a54c42;font-size:12px}
+.error-banner button{float:right;border:0;background:transparent;color:#9c4339;text-decoration:underline}
+@media(max-width:900px){.forecast-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.forecast-day{padding:15px 8px}.current-card{grid-template-columns:1fr .7fr}.current-stats{grid-column:1/-1;border-left:0;border-top:1px solid #ffffff30;padding:15px 0 0;margin-top:14px}.current-stats div{display:grid;grid-template-columns:20px auto;gap:5px}.current-stats strong{grid-column:2}.intro-art{margin-right:10px}}
+@media(max-width:560px){.page-shell{padding:0 17px}.topbar{height:68px}.intro{padding:38px 2px 30px;min-height:190px}.intro-art{width:105px;margin:0}.intro-art svg{width:80px}.sun-orb{width:58px;height:58px;right:15px}.search-panel{padding:19px 16px}.search-heading h2{font-size:17px}.current-card{padding:20px;grid-template-columns:1fr .55fr}.current-temp{font-size:49px}.current-icon svg{width:75px}.forecast-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.forecast-day{min-height:160px}.forecast-day:last-child{grid-column:span 2}.section-heading{align-items:start;gap:10px}.updated{font-size:9px;white-space:nowrap;padding-top:5px}.footnote{margin-bottom:24px}footer{gap:10px;line-height:1.5}footer span{text-align:right}}
